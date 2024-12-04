@@ -11,13 +11,17 @@
   "author": "Anjali deshmukh",
   "license": "ISC",
   "dependencies": {
+    "@types/jsonwebtoken": "^9.0.7",
     "bcrypt": "^5.1.1",
     "express": "^4.21.1",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.8.3",
     "nodemailer": "^6.9.16",
     "ts-node-dev": "^2.0.0",
     "tsc-alias": "^1.8.10",
-    "tsconfig-paths": "^4.2.0"
+    "tsconfig-paths": "^4.2.0",
+    "yup": "^1.5.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",

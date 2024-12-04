@@ -12,6 +12,10 @@ interface Methods {
    comparePassword(password:string):Promise<boolean>
 }
 
+interface Methods {
+   compareToken(token:string):Promise<boolean>
+}
+
  const schema = new Schema<AuthVerificationDocument , {} ,  Methods>({
      owner:{
         type: Schema.Types.ObjectId,

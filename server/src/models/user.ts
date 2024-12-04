@@ -1,10 +1,13 @@
 import { model, Schema ,  Document } from "mongoose";
 import { compare, genSalt ,hash } from "bcrypt";
+import { string } from "yup";
 
 interface UserDocument extends Document {
     name:string
     password:string
     email:string
+    verified:boolean,
+    tokens:string[]
 }
 
 interface Methods {
@@ -25,7 +28,12 @@ const userSchema  = new Schema<UserDocument , {} , Methods>({
     name:{
         type:String,
         require:true
-    }
+    },
+    verified:{
+        type:Boolean,
+        default: false
+    },
+     tokens:[String]
 
 },{timestamps:true})
 
